@@ -1,2 +1,70 @@
-\section{Running SystemVMs} \zlabel{sec:running-system-vms}
+\section{Running System-VMs} \zlabel{sec:running-system-vms}
 Introduce the mechanisms that let the CloudStack management service interact with the System VMs and show how to troubleshoot problems.
+
+\subsection{Network Configuration of System-VMs} \zlabel{subsec:network-configuration-of-system-vms}
+
+\subsubsection{Available Networks}
+
+\paragraph {Public Networks}
+80.241.63.0/24
+additional ranges may be added. Is it possible to an private range as public?? And use it dedicated for virtual router public ips.
+
+\paragraph {Guest Networks}
+Multiple like configured
+
+\paragraph {Management Networks}
+10.97.12.0/24
+
+\paragraph {Storage Networks}
+10.97.16.0/24
+
+
+\paragraph {Link-local Interfaces}
+Link-local connections from virtualization hosts.
+
+\subsubsection{Network interfaces for system VMs}
+
+For secondary storage VM:
+
+\begin{itemize}
+  \item eth0 - 169.254.0.0/16
+  \item eth1 - 10.97.15.0/22
+  \item eth2 - 80.241.63.0/24
+  \item eth3 - 10.97.16.0/22
+\end{itemize}
+
+For console proxy VM:
+
+\begin{itemize}
+  \item eth0 - 169.254.0.0/16
+  \item eth1 - 10.97.15.0/22
+  \item eth2 - 80.241.63.0/24
+\end{itemize}
+
+For virtual router on isolated network:
+
+\begin{itemize}
+  \item eth0 - internal for isolated net
+  \item eth1 - 169.254.0.0/16
+  \item eth2 - 80.241.63.0/24 - public Network for sNAT service
+\end{itemize}
+
+For virtual router on shared network:
+
+\begin{itemize}
+  \item eth0 - IP in the shared network
+  \item eth1 - 169.254.0.0/16
+\end{itemize}
+
+
+\subsection{root Passwords on System-VMs}
+
+Default root password can be used to access system-VMs through virtual console.
+
+\subsection{Communication of Management Service with System-VMs}
+
+\begin{itemize}
+  \item checkrouter.sh 
+  \item ...
+\end{itemize}
+
