@@ -1,0 +1,120 @@
+\documentclass[10pt,titlepage,ngerman]{article}
+
+% deutsche Silbentrennung
+\usepackage[ngerman]{babel}
+
+% wegen deutschen Umlauten
+\usepackage[utf8]{inputenc}
+
+% Macht Pipe Zeichen möglich
+\usepackage[T1]{fontenc}
+
+% wegen Fehler "Command \textcurrency unavailable in encoding OT1."
+\usepackage{textcomp}
+
+% erlaubt Zitate mit Angabe des Titels
+\usepackage{natbib} 
+
+% Für Quellcode Listings
+\usepackage{listings}
+\usepackage{color}
+
+% Damit Tabellenposition erzwungen werden  kann
+\usepackage{float}
+\restylefloat{table}
+
+% Abschalten von hängenden Einzügen
+\usepackage{parskip}
+
+% Referenzierung auf Kapitelnamen
+\usepackage[user,titleref]{zref}
+
+% Einbindung von Graphiken
+\usepackage{graphicx}
+\graphicspath{ {pics/} }
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+%\lstset{frame=tb,
+%  language=Java,
+%  aboveskip=3mm,
+%  belowskip=3mm,
+%  showstringspaces=false,
+%  columns=flexible,
+%  basicstyle={\small\ttfamily},
+%  numbers=none,
+%  numberstyle=\tiny\color{gray},
+%  keywordstyle=\color{blue},
+%  commentstyle=\color{dkgreen},
+%  stringstyle=\color{mauve},
+%  breaklines=true,
+%  breakatwhitespace=true,
+%  tabsize=3
+%}
+\definecolor{light-gray}{gray}{0.95}
+\lstset{columns=fullflexible, 
+  %numberstyle=\footnotesize,
+  basicstyle=\ttfamily\footnotesize,
+  backgroundcolor=\color{light-gray},
+  xleftmargin=0.5cm,
+  frame=lr,
+  framesep=8pt,
+  framerule=0pt}
+\lstset{columns=flexible}
+\lstset{keepspaces=true}
+
+\usepackage[a4paper,lmargin={4cm},rmargin={2cm},tmargin={2.5cm},bmargin = {2.5cm}]{geometry}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+% um URLs angeben zu können
+\usepackage{hyperref}
+
+\pagestyle{headings}
+
+\begin{document}
+
+\begin{titlepage}
+\title{Insight into System VMs}
+\date{2018}
+\author{Melanie Desaive m.desaive@heinlein-support.de\newline Stephan Seitz s.seitz@mailbox.org}
+\maketitle
+\end{titlepage}
+
+\pagenumbering{roman}
+
+\tableofcontents
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\newpage
+
+\input{system-vms-1-overview-system-vm-types.tex}
+
+\input{system-vms-2-templating-and-deplyment-of-systemvms.tex}
+
+\input{system-vms-3-running-system-vms.tex}
+
+\input{system-vms-4-buildchain-and-template-generation.tex}
+
+\newpage
+\listoffigures
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+
+\listoftables
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+
+\newpage
+\appendix
+
+\input{system-vms-A-someappendixifneccessary.tex}
+
+\nocite{*}
+\addcontentsline{toc}{section}{Literatur}
+\bibliographystyle{dinat}
+\bibliography{literatur}
+\end{document}
