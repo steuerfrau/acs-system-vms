@@ -1,3 +1,9 @@
-# About  
+# Create Bibliography
+latex system-vms.tex
+bibtex system-vms.aux
 
-Stephans and my notes for our talk about system VMs.
+# Compile Latex
+latex system-vms.tex ; latex system-vms.tex
+
+# Create PS file
+dvips system-vms.dvi
