@@ -1,9 +1,8 @@
-\select@language {ngerman}
 \contentsline {section}{\numberline {1}Introduce Kinds of System VMs}{2}{section.1}
 \contentsline {section}{\numberline {2}Templating of SystemVMs}{3}{section.2}
 \contentsline {section}{\numberline {3}Running SystemVMs}{3}{section.3}
 \contentsline {section}{\numberline {4}CloudStack Build Chain and Template Images}{3}{section.4}
-\contentsline {section}{Abbildungsverzeichnis}{4}{section*.2}
-\contentsline {section}{Tabellenverzeichnis}{4}{section*.3}
+\contentsline {section}{Table of Figures}{4}{section*.2}
+\contentsline {section}{List of Tables}{4}{section*.3}
 \contentsline {section}{\numberline {A}Some Appendix here}{5}{appendix.A}
-\contentsline {section}{Literatur}{5}{appendix.A}
+\contentsline {section}{Bibliography}{5}{appendix.A}

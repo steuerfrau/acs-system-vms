@@ -1,7 +1,7 @@
-\documentclass[10pt,titlepage,ngerman]{article}
+\documentclass[10pt,titlepage]{article}
 
 % deutsche Silbentrennung
-\usepackage[ngerman]{babel}
+% \usepackage[german]{babel}
 
 % wegen deutschen Umlauten
 \usepackage[utf8]{inputenc}
@@ -81,6 +81,13 @@
 \title{Insight into System VMs}
 \date{2018}
 \author{Melanie Desaive m.desaive@heinlein-support.de\newline Stephan Seitz s.seitz@mailbox.org}
+\author{
+  Desaive, Melanie\\
+  \texttt{m.desaive@heinlein-support.de}
+  \and
+  Seitz, Stephan\\
+  \texttt{s.seitz@mailbox.org}
+}
 \maketitle
 \end{titlepage}
 
@@ -93,20 +100,20 @@
 
 \newpage
 
-\input{system-vms-1-overview-system-vm-types.tex}
+\input{system-vms-1-introduce-kinds-of-system-vms.tex}
 
-\input{system-vms-2-templating-and-deplyment-of-systemvms.tex}
+\input{system-vms-2-templating-of-system-vms.tex}
 
 \input{system-vms-3-running-system-vms.tex}
 
-\input{system-vms-4-buildchain-and-template-generation.tex}
+\input{system-vms-4-buildchain-and-template-images.tex}
 
 \newpage
 \listoffigures
-\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\addcontentsline{toc}{section}{Table of Figures}
 
 \listoftables
-\addcontentsline{toc}{section}{Tabellenverzeichnis}
+\addcontentsline{toc}{section}{List of Tables}
 
 \newpage
 \appendix
@@ -114,7 +121,7 @@
 \input{system-vms-A-someappendixifneccessary.tex}
 
 \nocite{*}
-\addcontentsline{toc}{section}{Literatur}
+\addcontentsline{toc}{section}{Bibliography}
 \bibliographystyle{dinat}
-\bibliography{literatur}
+\bibliography{bibliography}
 \end{document}
